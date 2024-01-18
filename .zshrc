@@ -10,7 +10,7 @@ export LANG=ja_JP.UTF-8
 left-prompt() {
 	local dir="%F{14}%C%f"
 	local next="%F{11}$ %f"
-	echo -e "\n${dir}\n${next}"
+	echo -e "${dir}\n${next}"
 }
 right-prompt() {
 	local dir="%F{11}%~%f"
@@ -30,6 +30,12 @@ alias rm='rm -r'
 alias md='mkdir'
 alias ai='askai'
 alias tedvit='cd ~/study/tedvit'
+alias h='history -30'
+alias hg='history -1000 | grep'
+
+# expand history
+HISTSIZE=1000
 
 # starship config
 eval "$(starship init zsh)"
+# export starship_config=~/example/non/default/path/starship.toml
