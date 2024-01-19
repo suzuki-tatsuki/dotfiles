@@ -11,8 +11,6 @@ $git_status\
 
 # format of right prompt
 right_format = """
-$sudo\
-$cmd_duration\
 $time\
 """
 
@@ -41,15 +39,6 @@ modified = "modified"
 staged = "staged"
 renamed = "renamed"
 deleted = "deleted"
-
-[sudo]
-format = " sudo Command"
-disabled = false
-
-[cmd_duration]
-min_time = 500
-format = "[$duration]($style)"
-style = "fg:yellow"
 
 [time]
 disabled = false
