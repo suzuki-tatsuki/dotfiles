@@ -1,5 +1,3 @@
-# put this file at ~/.config
-
 # add line above prompt
 add_newline = true
 

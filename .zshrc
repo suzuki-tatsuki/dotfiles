@@ -5,7 +5,7 @@ source ~/perl5/perlbrew/etc/bashrc
 # export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
-# hyper config
+# prompt config (this may overwrap by starship)
 export LANG=ja_JP.UTF-8
 left-prompt() {
 	local dir="%F{14}%C%f"
@@ -28,7 +28,6 @@ alias rl='exec $SHELL -l'
 alias cl='clear'
 alias rm='rm -r'
 alias md='mkdir'
-alias ai='askai'
 alias tedvit='cd ~/study/tedvit'
 alias h='history -30'
 alias hg='history -1000 | grep'

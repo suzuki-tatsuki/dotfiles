@@ -151,5 +151,7 @@ $ hyper i hyper-search      // can use Command+f to search
 $ hyper i verminal          // colorscheme
 $ hyper i hyper-statusline  // show file-pass under the window
 $ hyper i hyperboerder      // make color around window
+$ hyper i hyper-highlight-active-pane
+                            // highlight active pane
 $ hyper i hyper-rose-pine   // another colorscheme
 ```
