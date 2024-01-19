@@ -38,4 +38,3 @@ HISTSIZE=1000
 
 # starship config
 eval "$(starship init zsh)"
-# export starship_config=~/example/non/default/path/starship.toml
