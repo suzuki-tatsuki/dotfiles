@@ -64,8 +64,8 @@ $ brew install yarn         // yarn
 ### その他
 ```shell
 $ brew install neovim               // Neovim
-$ brew install chrome               // google chrome
-$ brew install firefox              // firefox
+$ brew install --cask google-chrome // google chrome
+$ brew install --cask firefox       // firefox
 $ brew install --cask hyper         // hyper
 $ brew install --cask google-drive  // google drive
 $ brew install --cask obsidian      // obsidian (Markdown editor)
