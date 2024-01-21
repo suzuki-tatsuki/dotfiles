@@ -88,9 +88,3 @@ vim.diagnostic.config({
 -- 不可視文字可視化
 opt.list = true
 opt.listchars = { tab = '>>', trail = '-', nbsp = '+' }
-
--- MarkDown の設定
---vim.g.mkdp_auto_open = true
---vim.g.mkdp_theme = true
---vim.g.mkdp_markdown_css = true
---vim.g.mkdp_highlight_css = true

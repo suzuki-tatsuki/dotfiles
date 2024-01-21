@@ -4,7 +4,10 @@ return{
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     build = "cd app && yarn install",
     init = function()
-        vim.g.mkdp_filetypes = { "markdown" }
+		vim.g.mkdp_auto_start = 1 
+		vim.g.mkdp_markdown_css = expand('~/.config/nvim/lua/plugins/md.css')
+		vim.g.mkdp_page_title = '${name}'
+        vim.g.mkdp_filetypes = {"markdown"}
     end,
 
     ft = { "markdown" },
@@ -12,7 +15,6 @@ return{
     config = function()
         local opts = { noremap = true, silent = true }
         local keymap = vim.api.nvim_set_keymap
-		global mkdp_markdown_css = "~/.config/nvim/lua/plugins/md.css"
 
         keymap("n", "<C-s>", "<Plug>MarkdownPreview", opts)
         keymap("n", "<C-q>", "<Plug>MarkdownPreviewStop", opts)
