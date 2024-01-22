@@ -11,6 +11,7 @@ $git_status\
 
 # format of right prompt
 right_format = """
+$cmd_duration\
 $time\
 """
 
@@ -39,6 +40,11 @@ modified = "modified"
 staged = "staged"
 renamed = "renamed"
 deleted = "deleted"
+
+[cmd_duration]
+min_time = 100
+show_milliseconds = true
+format = "[$duration]($style)"
 
 [time]
 disabled = false

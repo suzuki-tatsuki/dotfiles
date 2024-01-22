@@ -20,8 +20,8 @@ keymap("n", "<", "<h", opts)
 keymap("n", ">", ">l", opts)
 keymap("n", "p", "p`]", opts)
 keymap("n", "yy", "yy`]", opts)
-keymap("n", "J", "3<C-e>", opts)
-keymap("n", "K", "3<C-y>", opts)
+keymap("n", "J", "5<C-e>", opts)
+keymap("n", "K", "5<C-y>", opts)
 
 keymap("n", "<leader>bb", "<cmd>b#<CR>", opts)
 

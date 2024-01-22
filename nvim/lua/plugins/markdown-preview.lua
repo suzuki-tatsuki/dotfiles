@@ -5,7 +5,6 @@ return{
     build = "cd app && yarn install",
     init = function()
 		vim.g.mkdp_auto_start = 1 
-		vim.g.mkdp_markdown_css = expand('~/.config/nvim/lua/plugins/md.css')
 		vim.g.mkdp_page_title = '${name}'
         vim.g.mkdp_filetypes = {"markdown"}
     end,

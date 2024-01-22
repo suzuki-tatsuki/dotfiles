@@ -23,7 +23,8 @@ unset -f left-prompt
 unset -f right-prompt
 
 # alias
-alias ls='ls -G -F -l'
+alias ls='ls -GnS'
+alias lsa='ls -GFA'
 alias rl='exec $SHELL -l'
 alias cl='clear'
 alias rm='rm -r'
