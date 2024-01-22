@@ -23,16 +23,39 @@ unset -f left-prompt
 unset -f right-prompt
 
 # alias
-alias ls='ls -GnS'
-alias lsa='ls -GFA'
+alias ls='ls -Gn'
+alias lsa='ls -GA'
 alias rl='exec $SHELL -l'
 alias cl='clear'
-alias rm='rm -r'
-alias md='mkdir'
-alias tedvit='cd ~/study/tedvit/'
-alias assets='cd ~/study/tedvit/dist/assets'
 alias h='history -30'
 alias hg='history -1000 | grep'
+alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
+alias rm='rm -r'
+alias md='mkdir'
+alias dot='cd ~/dotfiles'
+alias tedvit='cd ~/study/tedvit/'
+alias assets='cd ~/study/tedvit/dist/assets'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ga='git add .'
+alias gd='git diff'
+alias gs='git status'
+alias gp='git push'
+alias gb='git branch'
+alias gst='git status'
+alias gco='git checkout'
+alias gf='git fetch'
+alias gc='git commit'
+alias code='nvim'
+alias atom='nvim'
+alias emacs='nvim'
+alias edit='nvim'
+
+# global alias
+alias -g G='| grep --color=auto'
+alias -g H='| head'
+alias -g T='| tail'
 
 # expand history
 HISTSIZE=1000
