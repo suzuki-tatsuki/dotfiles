@@ -23,8 +23,10 @@ unset -f left-prompt
 unset -f right-prompt
 
 # alias
-alias ls='ls -Gn'
-alias lsa='ls -GA'
+alias ls='ls -G'
+alias ll='ls -n'
+alias lsa='ls -A'
+alias lla='ll -A'
 alias rl='exec $SHELL -l'
 alias cl='clear'
 alias h='history -30'
@@ -35,6 +37,7 @@ alias md='mkdir'
 alias dot='cd ~/dotfiles'
 alias tedvit='cd ~/study/tedvit/'
 alias assets='cd ~/study/tedvit/dist/assets'
+alias submit='cd ~/study/seminar/submit'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
