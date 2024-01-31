@@ -1,21 +1,14 @@
 # 環境設定
-
-## homebrew
-### パッケージマネージャー
-
+## シェルスクリプト
+dotfilesにある以下のシェルスクリプトを実行することでインストールをまとめて行う。
 ```shell
-$ brew install node         // Node.js
-$ brew install yarn         // yarn
+$ sh symbol.sh          // create symbolic file
+$ sh brweinstall.sh     // brew installation
+$ sh hyper.sh           // hyper extention
 ```
 
-
+## homebrew
 ### java
-* openJDK インストール
-    ```shell
-    $ brew install openjdk      // latest openJDK (Java21)
-    $ brew install openjdk@17   // version of Java17
-    ```
-
 * インストール済みのJDK(JAVA_HOME)の確認
     ```shell
     $ /usr/libexec/java_home -V
@@ -61,25 +54,8 @@ $ brew install yarn         // yarn
         > SAP製品互換性
 
 
-### その他
-```shell
-$ brew install neovim               // Neovim
-$ brew install --cask google-chrome // google chrome
-$ brew install --cask firefox       // firefox
-$ brew install --cask hyper         // hyper
-$ brew install --cask google-drive  // google drive
-$ brew install --cask obsidian      // obsidian (Markdown editor)
-```
-
-
 ## Node.js
 ### npm
-パスを通すために **-g** オプションをつける ~~(らしい)~~
-```shell
-$ npm install -g prettier   // formatter
-$ npm install -g esLint     // analyser
-```
-
 * prettier の設定ファイル (.prettierrc)  
     [VScode の拡張機能](https://ma-vericks.com/blog/vscode-prettier/ )  
     [設定ファイルの要素](https://zenn.dev/rescuenow/articles/c07dd571dfe10f/ )
@@ -97,7 +73,6 @@ $ npm install -g esLint     // analyser
     ```
 
 ### npx
-
 ```shell
 $ npx tsc --init    // TypeScript compiler
 ```
@@ -142,16 +117,3 @@ $ npx tsc --init    // TypeScript compiler
     $ perlbrew list             // check which version is available
     $ perlbrew switch 5.26.3    // switch perl version
     ```
-
-
-## hyper
-### 拡張機能のインストール
-```
-$ hyper i hyper-search      // can use Command+f to search
-$ hyper i verminal          // colorscheme
-$ hyper i hyper-statusline  // show file-pass under the window
-$ hyper i hyperboerder      // make color around window
-$ hyper i hyper-highlight-active-pane
-                            // highlight active pane
-$ hyper i hyper-rose-pine   // another colorscheme
-```
