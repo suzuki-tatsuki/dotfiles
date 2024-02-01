@@ -1,25 +1,69 @@
-# 環境設定
-## シェルスクリプト
-dotfilesにある以下のシェルスクリプトを実行することでインストールをまとめて行う。
+# README
+## 環境設定
+### まずはじめに
+git をいれないことには homebrew をインストールできないので、その準備をする。  
+以下のコマンドで下の言語やツールをまとめてインストールできる。
 ```shell
-$ sh symbol.sh          // create symbolic file
-$ sh brweinstall.sh     // brew installation
-$ sh hyper.sh           // hyper extention
+$ xcode-select --install
+```
+* clang (Apple clang)
+* git (Apple git)
+* make (GNU Make)
+* python (python3?)
+* swift (Apple Swift)
+* svn (Subversion、オープンソースのバージョン管理システム)
+
+次に以下のコマンドで [homebrew](https://brew.sh) をインストールするする。
+```shell
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## homebrew
-### java
+homebrew でインストールするファイルが記されている `.Brewfile` のシンボリックファイルを作成する。ついでに他のシンボリックファイルを作成するために `setup/` 内の以下のシェルスクリプトを実行する。
+```shell
+$ sh symbol.sh
+```
+
+最後に [homebrew bundle](https://github.com/Homebrew/homebrew-bundle) を使ってパッケージやアプリケーションを一括インストールする。以下のコマンドでインストールできる。
+```shell
+$ brew bundle install --global
+```
+
+### ターミナル
+`setup/` 内の以下のシェルスクリプトを実行することでインストールをまとめて行う。
+```shell
+$ sh hyper.sh
+```
+これで環境設定は完了した。
+
+
+## homebrew のあれこれ
+### homebrew bundle
+`.Brewfile` を以下のコマンドによって生成できる。  
+上書きする場合は `--force` オプションをつける。
+```shell
+$ brew bundle dump --global
+```
+
+`.Brewfile` にないファイルを一括削除する場合は以下のコマンドを実行する。
+```shell
+$ brew bundle cleanup --global --force
+```
+
+### javaのバージョン切り替え
+* homebrew で別のバージョンの java をインストールする。
+    ```shell
+    $ brew install openjdk@17
+    ```
+
 * インストール済みのJDK(JAVA_HOME)の確認
     ```shell
     $ /usr/libexec/java_home -V
     ```
 
 * JDK の切り替え  
-    使う java のバージョンのパスを通す。  
-    使わない方をコメントアウトする。  
-    変更したら "**$ exec $SHELL -l**" でシェルを更新する。
+    `.zshrc` で java のバージョンのパスを通す。  使わない方をコメントアウトする。  
+    変更したら `$ exec $SHELL -l` でシェルを更新する。
     ```zshrc
-    # .zshrc
     export PATH=“/opt/homebrew/opt/openjdk/bin:$PATH” 
     export PATH=“/opt/homebrew/opt/openjdk@17/bin:$PATH”
     ```
@@ -55,11 +99,11 @@ $ sh hyper.sh           // hyper extention
 
 
 ## Node.js
-### npm
+### Prettier
 * prettier の設定ファイル (.prettierrc)  
     [VScode の拡張機能](https://ma-vericks.com/blog/vscode-prettier/ )  
     [設定ファイルの要素](https://zenn.dev/rescuenow/articles/c07dd571dfe10f/ )
-    ```prettierrc
+    ```.prettierrc
     {
             "printWidth": 150,
             "tabWidth": 2,
@@ -72,11 +116,6 @@ $ sh hyper.sh           // hyper extention
     }
     ```
 
-### npx
-```shell
-$ npx tsc --init    // TypeScript compiler
-```
-
 
 ## perlbrew
 ### perlbrewのインストール
@@ -88,8 +127,7 @@ $ npx tsc --init    // TypeScript compiler
     ```
 
 * zsh に perlbrew のパスを通す
-    ```zshrc
-    # .zshrc
+    ```.zshrc
     source ~/perl5/perlbrew/etc/zshrc
     ```
     以下のコマンドで上記の設定を反映。
