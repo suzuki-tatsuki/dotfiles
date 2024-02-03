@@ -2,8 +2,8 @@
 source ~/perl5/perlbrew/etc/bashrc
 
 # pass for java version
-# export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 # prompt config (this may overwrap by starship)
 export LANG=ja_JP.UTF-8
