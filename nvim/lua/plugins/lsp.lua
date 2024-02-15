@@ -54,11 +54,13 @@ return {
                 local opts = {}
 				opts.capabilities = capabilities
 
-                -- LSPのhighlight機能を無効化する
-                -- treesitterを使うため必要ない
-                opts.on_attach = function(client, _)
-                    client.server_capabilities.semanticTokensProvider = nil
-                end
+				if server_name ~= "typst_lsp" then
+					-- LSPのhighlight機能を無効化する
+					-- treesitterを使うため必要ない
+					opts.on_attach = function(client, _)
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end
 
                 if server_name == "jdtls" and false then
                     opts.cmd = {
@@ -92,6 +94,12 @@ return {
                         },
                     }
                 end
+
+                --if server_name == "typst_lsp" then
+                    --opts.filetypes = {
+						--"typst",
+                    --}
+                --end
 
                 nvim_lsp[server_name].setup(opts)
             end,

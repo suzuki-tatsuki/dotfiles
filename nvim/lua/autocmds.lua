@@ -1,8 +1,3 @@
-vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = "plugins.lua",
-    command = "PackerCompile",
-})
-
 -- CursorHoldが発火するまでの時間
 vim.opt.updatetime = 200
 vim.api.nvim_create_autocmd("CursorHold", {
@@ -11,4 +6,13 @@ vim.api.nvim_create_autocmd("CursorHold", {
             vim.diagnostic.open_float(0, { scope = "cursor", focus = false })
         end
     end,
+})
+
+
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+	pattern = {"*.typ"},
+	callback = function()
+		local buf = vim.api.nvim_get_current_buf()
+		vim.api.nvim_buf_set_option(buf, "filetype", "typst")
+	end,
 })
