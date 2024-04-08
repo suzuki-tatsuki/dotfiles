@@ -5,6 +5,9 @@ source ~/perl5/perlbrew/etc/bashrc
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
+# rust
+source "$HOME/.cargo/env"
+
 # prompt config (this may overwrap by starship)
 export LANG=ja_JP.UTF-8
 left-prompt() {
