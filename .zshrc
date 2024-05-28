@@ -5,6 +5,12 @@ source ~/perl5/perlbrew/etc/bashrc
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
+# pass for nvm
+source /opt/homebrew/opt/nvm/nvm.sh
+
+# env of python3
+export PYTHON="/opt/homebrew/bin/python3"
+
 # rust
 source "$HOME/.cargo/env"
 
@@ -56,6 +62,7 @@ alias gco='git checkout'
 alias gf='git fetch'
 alias gc='git commit --allow-empty-message'
 alias gcl='git clean -i'
+alias python='python3'
 alias code='nvim'
 alias atom='nvim'
 alias emacs='nvim'
