@@ -44,11 +44,6 @@ alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 alias rm='rm -r -i'
 alias md='mkdir'
 alias dot='cd ~/dotfiles'
-alias ss='cd ~/Pictures/ss'
-alias tedvit='cd ~/study/tedvit/'
-alias assets='cd ~/study/tedvit/dist/assets'
-alias submit='cd ~/study/seminar/submit'
-alias jsise='cd ~/study/seminar/jsise'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -78,3 +73,9 @@ HISTSIZE=1000
 
 # starship config
 eval "$(starship init zsh)"
+
+alias ss='cd ~/Pictures/ss'
+alias tedvit='cd ~/study/tedvit/'
+alias assets='cd ~/study/tedvit/dist/assets'
+alias submit='cd ~/study/seminar/submit'
+alias jsise='cd ~/study/seminar/jsise'
