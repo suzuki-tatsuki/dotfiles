@@ -13,7 +13,7 @@ source "$HOME/.cargo/env"
 
 # path aliases
 alias ss='cd ~/Pictures/ss'
-alias tedvit='cd ~/study/tedvit/'
-alias assets='cd ~/study/tedvit/dist/assets'
+alias tedvit='cd ~/study/merged_tedvit/'
+alias assets='cd ~/study/merged_tedvit/dist/assets'
 alias submit='cd ~/study/seminar/submit'
 alias jsise='cd ~/study/seminar/jsise'
