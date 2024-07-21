@@ -88,3 +88,5 @@ vim.diagnostic.config({
 -- 不可視文字可視化
 opt.list = true
 opt.listchars = { tab = '>>', trail = '-', nbsp = '+' }
+
+

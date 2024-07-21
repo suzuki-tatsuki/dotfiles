@@ -16,3 +16,11 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
 		vim.api.nvim_buf_set_option(buf, "filetype", "typst")
 	end,
 })
+
+-- ターミナルモード
+vim.api.nvim_set_keymap('n', 'tt', '<cmd>terminal<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'tx', '<cmd>belowright new<CR><cmd>terminal<CR>', { noremap = true, silent = true })
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  command = "startinsert"
+})
