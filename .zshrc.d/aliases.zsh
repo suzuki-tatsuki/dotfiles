@@ -12,6 +12,7 @@ alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 alias rm='rm -r -i'
 alias md='mkdir'
 alias dot='cd ~/dotfiles'
+alias common='cd ~/dotfiles/common'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
