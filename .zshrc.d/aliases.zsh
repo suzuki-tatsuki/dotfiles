@@ -1,4 +1,3 @@
-
 # Aliases
 alias ls='ls -G'
 alias ll='ls -n'
@@ -31,6 +30,7 @@ alias code='nvim'
 alias atom='nvim'
 alias emacs='nvim'
 alias edit='nvim'
+alias nano='nvim'
 
 # Global aliases
 alias -g G='| grep --color=auto'
