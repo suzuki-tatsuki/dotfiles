@@ -11,6 +11,9 @@ source /opt/homebrew/opt/nvm/nvm.sh
 # cargo
 source "$HOME/.cargo/env"
 
+# latexmk
+export PATH=$PATH:/usr/local/texlive/2024/bin/universal-darwin
+
 # path aliases
 alias ss='cd ~/Pictures/ss'
 alias tedvit='cd ~/study/merged_tedvit/'
